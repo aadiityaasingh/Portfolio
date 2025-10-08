@@ -65,18 +65,6 @@ app.get("/resume", async (req, res) => {
   // res.redirect("/home")
 });
 
-// const skills = [
-//   { name: 'HTML', logo: '/images/html.png', level: 90 },
-//   { name: 'CSS', logo: '/images/css.png', level: 85 },
-//   { name: 'JavaScript', logo: '/images/js.png', level: 80 },
-//   { name: 'Node.js', logo: '/images/node.png', level: 75 },
-//   { name: 'MongoDB', logo: '/images/mongo.png', level: 70 }
-// ];
-
-// app.get('/', (req, res) => {
-//   res.render('skills', { skills });
-// });
-
 app.listen(8080, () => {
   console.log("server is running");
 });
