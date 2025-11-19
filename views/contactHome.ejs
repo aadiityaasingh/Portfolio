@@ -1,30 +1,107 @@
+<style>
+  .contact-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  margin-bottom: 40px;
+  color: #777;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.contact-card {
+  background: #3a3838;
+  border-radius: 12px;
+  padding: 30px 25px;
+  width: 250px;
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #e6e6e6;
+  transition: 0.3s ease;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  border-color: #bbb;
+}
+
+.contact-icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #0077b5; /* looks nice on all icons */
+}
+
+.contact-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.contact-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+</style>
+
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="contact.css">
-</head>
-<body style="background: linear-gradient(135deg, #111, #222)">
+    <link rel="stylesheet" href="contact.css" />
+  </head>
+  <body style="background: linear-gradient(135deg, #111, #222)">
     <section id="contact" class="contact-section">
   <div class="container">
-    <h2>Contact Me</h2>
-    <p>Have a question, collaboration idea, or just want to say hi? Reach out below!</p>
-    <form action="/home" method="POST" class="contact-form">
-      <div class="form-group">
-        <input type="text" name="contact[name]" placeholder="Your Name" />
-      </div>
-      <div class="form-group">
-        <input type="email" name="contact[email]" placeholder="Your Email"/>
-      </div>
-      <div class="form-group">
-        <textarea name="contact[msg]" placeholder="Your Message" rows="5"></textarea>
-      </div>
-        <button class="btn-submit">Send Message</button>
-    </form>
+
+    <h2 class="section-title">Get in Touch</h2>
+    <p class="section-subtitle">
+      If you want to reach out, here are the best ways to contact me.
+    </p>
+
+    <div class="contact-links">
+
+      <a href="mailto:adityasingh.6488@gmail.com" class="contact-card" target="_blank">
+        <i class="fas fa-envelope contact-icon"></i>
+        <h3>Email</h3>
+        <p>adityasingh.6488@gmail.com</p>
+      </a>
+
+      <a href="https://www.linkedin.com/in/aditya-singh-245226231" class="contact-card" target="_blank">
+        <i class="fab fa-linkedin contact-icon"></i>
+        <h3>LinkedIn</h3>
+        <p>aditya-singh-245226231</p>
+      </a>
+
+      <a href="https://www.instagram.com/aadiityaasingh/" class="contact-card" target="_blank">
+        <i class="fab fa-instagram contact-icon"></i>
+        <h3>Instagram</h3>
+        <p>@aadiityaasingh</p>
+      </a>
+
+    </div>
+
   </div>
 </section>
 
-</body>
+  </body>
 </html>
