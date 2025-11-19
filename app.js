@@ -52,10 +52,10 @@ app.get("/contact", async (req, res) => {
   res.render("contact.ejs");
 });
 
-app.post("/home", async (req, res) => {
+app.post("/", async (req, res) => {
   const newInformation = new Information(req.body.contact);
   await newInformation.save();
-  res.redirect("/home")
+  res.redirect("/")
 });
 
 app.get("/resume", async (req, res) => {
