@@ -19,24 +19,25 @@
           </p>
 
           <div class="hero-buttons">
-          <form action="/resume" method="get" target="_blank">
-            <a href="/resume" target="_blank" download>
-              <button class="btn btn-outline" >Download CV</button>
-            </a>
-            
-          </form>
+            <form action="/resume" method="get" target="_blank">
+              <a href="/resume.pdf" target="_blank" class="btn btn-outline">
+                View Resume
+              </a>
+            </form>
           </div>
 
           <div class="social-icons">
             <a href="https://github.com/aadiityaasingh" target="_blank"
               >🐱 GitHub</a
             >
-            <a href="https://www.linkedin.com/in/aditya-singh-245226231/" target="_blank"
+            <a
+              href="https://www.linkedin.com/in/aditya-singh-245226231/"
+              target="_blank"
               >💼 LinkedIn</a
             >
-            <a href="https://www.instagram.com/aadiityaasingh" target="_blank">📷 Instagram</a>
-
-
+            <a href="https://www.instagram.com/aadiityaasingh" target="_blank"
+              >📷 Instagram</a
+            >
           </div>
         </div>
 
@@ -49,89 +50,91 @@
       <div class="scroll-down">⬇️</div>
     </section>
     <script>
-  const roles = ["MERN Stack Developer", "AI & ML Enthusiast", "Web3 Explorer"];
-  let i = 0;
-  let j = 0; 
-  let isDeleting = false;
-  const typingElement = document.querySelector(".typing-text");
+      const roles = [
+        "MERN Stack Developer",
+        "AI & ML Enthusiast",
+        "Web3 Explorer",
+      ];
+      let i = 0;
+      let j = 0;
+      let isDeleting = false;
+      const typingElement = document.querySelector(".typing-text");
 
-  function typeEffect() {
-    const currentRole = roles[i];
+      function typeEffect() {
+        const currentRole = roles[i];
 
-    if (!isDeleting) {
-      typingElement.textContent = currentRole.substring(0, j++);
-    } else {
-      typingElement.textContent = currentRole.substring(0, j--);
-    }
+        if (!isDeleting) {
+          typingElement.textContent = currentRole.substring(0, j++);
+        } else {
+          typingElement.textContent = currentRole.substring(0, j--);
+        }
 
-    let typingSpeed = isDeleting ? 150 : 250; // Slower typing, slightly faster delete
+        let typingSpeed = isDeleting ? 150 : 250; // Slower typing, slightly faster delete
 
-    if (!isDeleting && j === currentRole.length) {
-      isDeleting = true;
-      typingSpeed = 1000; // Pause before deleting
-    } else if (isDeleting && j === 0) {
-      isDeleting = false;
-      i = (i + 1) % roles.length; // Move to next role
-      typingSpeed = 200; // Pause before typing next role
-    }
+        if (!isDeleting && j === currentRole.length) {
+          isDeleting = true;
+          typingSpeed = 1000; // Pause before deleting
+        } else if (isDeleting && j === 0) {
+          isDeleting = false;
+          i = (i + 1) % roles.length; // Move to next role
+          typingSpeed = 200; // Pause before typing next role
+        }
 
-    setTimeout(typeEffect, typingSpeed);
-  }
+        setTimeout(typeEffect, typingSpeed);
+      }
 
-  typeEffect();
+      typeEffect();
 
-const canvas = document.getElementById('particles');
-const ctx = canvas.getContext('2d');
+      const canvas = document.getElementById("particles");
+      const ctx = canvas.getContext("2d");
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
 
-const particlesArray = [];
-const numberOfParticles = 100;
+      const particlesArray = [];
+      const numberOfParticles = 100;
 
-class Particle {
-  constructor() {
-    this.x = Math.random() * canvas.width;
-    this.y = Math.random() * canvas.height;
-    this.size = Math.random() * 3;
-    this.speedX = Math.random() * 0.5 - 0.25;
-    this.speedY = Math.random() * 0.5 - 0.25;
-  }
+      class Particle {
+        constructor() {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+          this.size = Math.random() * 3;
+          this.speedX = Math.random() * 0.5 - 0.25;
+          this.speedY = Math.random() * 0.5 - 0.25;
+        }
 
-  update() {
-    this.x += this.speedX;
-    this.y += this.speedY;
-    if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-    if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
-  }
+        update() {
+          this.x += this.speedX;
+          this.y += this.speedY;
+          if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+          if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+        }
 
-  draw() {
-    ctx.fillStyle = 'white';
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    ctx.fill();
-  }
-}
+        draw() {
+          ctx.fillStyle = "white";
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
 
-function init() {
-  for (let i = 0; i < numberOfParticles; i++) {
-    particlesArray.push(new Particle());
-  }
-}
+      function init() {
+        for (let i = 0; i < numberOfParticles; i++) {
+          particlesArray.push(new Particle());
+        }
+      }
 
-function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  particlesArray.forEach(p => {
-    p.update();
-    p.draw();
-  });
-  requestAnimationFrame(animate);
-}
+      function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particlesArray.forEach((p) => {
+          p.update();
+          p.draw();
+        });
+        requestAnimationFrame(animate);
+      }
 
-init();
-animate();
-
-</script>
-
+      init();
+      animate();
+    </script>
   </body>
 </html>
