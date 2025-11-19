@@ -1,34 +1,27 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 🌐 Personal Portfolio
 
 
-A modern and responsive personal portfolio website built to showcase my skills, projects, and achievements as a developer.
+This is my personal portfolio website built to showcase my work, skills, and the projects I’ve actually completed—not generic filler. It’s built using EJS, Node.js, Express, and Custom CSS/JS.
+The goal is simple: clean UI, fast load time, and zero unnecessary animation
 
 🚀 Features
 
-🖥️ Fully responsive design for all devices
+Projects Section – Each project includes a short description, tech stack, and source links.
 
-🎨 Modern UI with smooth animations
+About Section – Quick summary of who I am and what I actually do.
 
-🗂️ Projects showcase with descriptions and links
+Contact Section – Direct links to Email, LinkedIn, Instagram. Email opens directly in compose mode.
 
-📞 Contact section for easy communication
-
-🌐 Social media integration
+Responsive Design – Works properly on desktop and mobile without hacky CSS.
 
 🛠️ Tech Stack
 
-Frontend: HTML, CSS, JavaScript, EJS
+Frontend: EJS, HTML5, Custom CSS, JavaScript
 
-Backend: Node.js, Express.js
+Backend: Node.js, Express
 
-Database: MongoDB
+Deployment: Vercel
 
 Version Control: Git & GitHub
-=======
-# Portfolio
->>>>>>> 88a2e63 (updated)
-=======
-# Portfolio
->>>>>>> e006dc1e60dcb027ceefa51074c72a1ea9ca7c99
+
