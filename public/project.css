@@ -1,68 +1,71 @@
-/* Projects Section */
 .projects {
-  color: white;
-  padding: 80px 20px;
+  padding: 80px 0;
+  background: #0d1117; 
+}
+
+.section-title {
   text-align: center;
-}
-
-.projects .section-title {
-  font-size: 3rem;
-  margin-bottom: 40px;
+  font-size: 2.2rem;
+  font-weight: 600;
   color: #fff;
-  position: relative;
-}
-
-.projects .section-title::after {
-  content: "";
-  width: 80px;
-  height: 4px;
-  background: #ff007f;
-  display: block;
-  margin: 10px auto 0;
-  border-radius: 2px;
+  margin-bottom: 50px;
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 35px;
 }
 
 .project-card {
-  background: #111;
-  border-radius: 15px;
+  background: #11161d;
+  border-radius: 14px;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  border: 1px solid #222;
-}
-
-.project-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.project-card:hover img {
-  transform: scale(1.1);
+  transition: 0.3s ease;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.05);
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(255, 0, 127, 0.3);
+  transform: translateY(-6px);
+  border-color: rgba(255,255,255,0.12);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.35);
 }
 
-.project-content {
-  padding: 20px;
+.project-thumb {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0f141b;
 }
 
-.project-content h3 {
-  font-size: 1.5rem;
-  color: #ff007f;
+.project-thumb img {
+  max-width: 65%;
+  max-height: 70%;
+  object-fit: contain;
+  filter: grayscale(30%);
+  transition: 0.3s ease;
 }
 
-.project-content p {
-  font-size: 1rem;
-  color: #ccc;
+.project-card:hover .project-thumb img {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+.project-info {
+  padding: 20px 22px;
+}
+
+.project-info h3 {
+  color: #fff;
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+}
+
+.project-info p {
+  color: #b8bfc7;
+  font-size: 0.95rem;
+  line-height: 1.45;
 }
