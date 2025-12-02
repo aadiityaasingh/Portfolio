@@ -59,6 +59,17 @@
   transform: scale(1.05);
 }
 
+
+.about-text span {
+  transition: 0.3s;
+}
+.about-text span:hover {
+  color: #ffb88c;
+  letter-spacing: 1px;
+}
+
+
+
 /* Responsive */
 @media (max-width: 768px) {
   .about-content {
