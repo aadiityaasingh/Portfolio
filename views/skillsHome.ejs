@@ -7,33 +7,35 @@
     <link rel="stylesheet" href="skill.css">
 </head>
 <body style="background: linear-gradient(135deg, #111, #222)">
-    <section class="skills-section">
-  <h2 class="section-title">My Skills</h2>
-  <div class="skills-container">
-    <% const skills = [
-      { name: "HTML", logo: '/images/html.png', level: 90 },
-      { name: "CSS", logo: '/images/css.jpg', level: 85 },
-      { name: "JavaScript", logo: '/images/js.jpg', level: 80 },
-      { name: "Node.js", logo: '/images/nodejs.jpg', level: 75 },
-      { name: "Express.js", logo: '/images/expressjs.jpg', level: 70 },
-      { name: "MongoDB", logo: '/images/monodb.jpg', level: 80 },
-      { name: "React", logo: '/images/react.png', level: 60 },
-      { name: "SQL",  logo: '/images/sql.jpg',level: 85 },
-      { name: "EJS", logo: '/images/ejs.jpg', level: 80 }
-    ]; %>
+    <section id="skills" class="skills">
+  <div class="container">
+    <h2 class="section-title">Tech Stack</h2>
 
-     <% skills.forEach(skill => { %>
-      <div class="skill-card">
-        <img src="<%= skill.logo %>" alt="<%= skill.name %> Logo" class="skill-logo">
-        <h3><%= skill.name %></h3>
-        <div class="progress-bar">
-          <div class="progress" style="width: <%= skill.level %>%;"></div>
+    <div class="skill-grid">
+
+      <% const skills = [
+        { name: "HTML", logo: "/images/html.png" },
+        { name: "CSS", logo: "/images/css.jpg" },
+        { name: "JavaScript", logo: "/images/js.jpg" },
+        { name: "Node.js", logo: "/images/nodejs.jpg" },
+        { name: "Express.js", logo: "/images/expressjs.jpg" },
+        { name: "MongoDB", logo: "/images/monodb.jpg" },
+        { name: "React", logo: "/images/react.png" },
+        { name: "SQL", logo: "/images/sql.jpg" },
+        { name: "EJS", logo: "/images/ejs.jpg" }
+      ]; %>
+
+      <% skills.forEach(skill => { %>
+        <div class="skill-item">
+          <img src="<%= skill.logo %>" alt="<%= skill.name %>">
+          <span><%= skill.name %></span>
         </div>
-        <p><%= skill.level %>%</p>
-      </div>
-    <% }) %>
+      <% }) %>
+
+    </div>
   </div>
 </section>
+
 
 
 </body>
